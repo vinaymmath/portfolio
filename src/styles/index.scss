@@ -1,0 +1,105 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(38, 42, 51);
+    // background-color: #000000;
+    font-size: 18px;
+    font-family: 'Poppins', 'Fira Code', 'Courier New', Courier, monospace;
+    color: #ffffff;
+    height: 100%;
+}
+
+.container-fluid{
+    background: 
+        linear-gradient(rgba(38, 42, 51, 0.97), rgba(38, 42, 51, 0.97)),
+        url(../assets/backgrounds/blur.png) top left repeat;
+    background-size: 165px;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0 1rem;
+    min-height: 100vh;
+    display: flex;
+    // align-content: center;
+    align-items: center;
+    max-height: 100vh;
+    overflow: scroll;
+    flex-direction: column;
+    
+    .container-restricted{
+        width: 100%;
+        max-width: 600px;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .nav-h{
+        margin-top: 20px;
+        padding: 00px 0 20px 0;
+        width: 100%;
+        max-width: 600px;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        // background: 
+        // linear-gradient(rgba(38, 42, 51, 0.97), rgba(38, 42, 51, 0.97)),
+        // url(../assets/backgrounds/blur.png) top left repeat;
+        .v-section-header{
+            padding: 20px 36px 20px 36px;
+            width: 100%;
+            font-size: 14px;
+            background: 
+                linear-gradient(rgba(30, 34, 43, 0.97), rgba(30, 34, 43, 0.97)),
+                url(../assets/backgrounds/blur.png) top left repeat;
+            background-size: 165px;
+        }
+    }
+}
+
+.v-section{
+    width: 100%;
+    // border-radius: 8px;
+    background: 
+        linear-gradient(rgba(30, 34, 43, 0.97), rgba(30, 34, 43, 0.97)),
+        url(../assets/backgrounds/blur.png) top left repeat;
+    background-size: 165px;
+    background-color: rgba(30, 34, 43, 0.94);
+
+    padding: 2rem 1.5rem;
+    font-size: 14px;
+    
+    // &:nth-child(1){
+    //     // height: 50px;
+    //     // margin-top: 30px;
+    //     position: sticky;
+    //     padding: 20px 36px 20px 36px;
+    //     border-radius: 0 0 8px 8px;
+    // }
+    // &:nth-last-child(1){
+    //     // height: 50px;
+    //     // margin-bottom: 30px;
+    //     // padding: 20px 36px 20px 36px;
+    //     border-radius: 8px 8px 0 0;
+    // }
+}
+
+.resource-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 36px;
+
+    .redirection-menu-item{
+        // padding: 4px 0;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        img{
+            width: 20px;
+        }
+    }
+}
