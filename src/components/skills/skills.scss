@@ -1,5 +1,61 @@
-.skills-container{
-    height: 300px;
-    // width: 500px;
-    width: 100%;
+.page__skills{
+   .page__about-title{
+        font-size: 2rem;
+    }
+    .page__about-title--primary{
+        color: #ffffff;
+    }
+    .page__about-title--secondary{
+        color: #DD6011;
+    }
+    .skills__list{
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        flex-wrap: wrap;
+        
+        .skill{
+            min-width: 220px;
+            text-decoration: none;
+            color: rgb(157, 159, 158);
+            cursor: pointer;
+            background-color: rgba(46, 50, 61, 0.4);
+            padding: 0.75rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+            flex: 1;
+            .tool-img{
+                width: 42px;
+            }
+            .tool__info{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                .tool-name{
+                    font-size: 18px;
+                }
+                .tool-desc{
+                    font-size: 14px;
+                }
+            }
+            .section__item-action{
+                width: 24px;
+                transform: rotate(-45deg);
+                transform-origin: 50% 50% 0px;
+                transition: transform 0.3s ease;
+                margin-left: auto;
+            }
+
+            &:hover{
+                background-color: rgba(46, 50, 61, 1);
+                .section__item-action{
+                    transform: rotate(-45deg) translate(8px, 0px);
+                }
+            }
+        }
+    }
 }

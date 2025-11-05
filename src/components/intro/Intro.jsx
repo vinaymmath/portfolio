@@ -17,11 +17,30 @@ export default function Intro(){
                     <ProfileResources></ProfileResources>
                 </div>
                 <p className="intro-text">
-                    Hi, I'm Vinay, a creative web developer. 
-                    <br />
-                    I love creating visually stunning web applications.
-
+                    Hi, I'm Vinay, a creative frontend engineer. 
+                    Over 8 years of my professional career, I have delivered numerous scalable web applications.
+                    I am skilled in micro-frontend architecture, reusable component libraries, and UI performance optimization and I expertise in delivering scalable, performant UIs through modern frontend architecture.
                 </p>
+                <div className="intro-reachout_btn-container">
+                    <p className="intro-text_reachout">
+                        Let us work together, please reachout here.
+                    </p>
+                    <a href="#reachout" className="intro-reachout_btn">
+                        <button>
+                            Reachout
+                        </button>
+                    </a>
+                </div>
+                {/* <div className="intro-reachout_btn-container">
+                    <p className="intro-text_reachout">
+                       Download my resume, here.
+                    </p>
+                    <a href="#reachout" className="intro-reachout_btn">
+                        <button>
+                            Reachout
+                        </button>
+                    </a>
+                </div> */}
             </div>
         </>
     )

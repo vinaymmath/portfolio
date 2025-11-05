@@ -2,41 +2,42 @@ import LinkedIn from "../../assets/icons/linkedIn.svg"
 import Leetcode from "../../assets/icons/leetcode.svg"
 import Github from "../../assets/icons/github.svg"
 import GithubResume from "../../assets/icons/github-resume.svg"
+import { LINK_TO_RESUME } from "../../utils/constants";
 
 const linksList = [
     {
         "id": "link1",
         "name": "LinkedIn",
         "img": LinkedIn,
-        "alt": "Redirect to LinkedIn",
+        "alt": "LinkedIn",
         "link": "https://www.linkedin.com/in/vinaymmath"
     },
     {
         "id": "link2",
         "name": "Leetcode",
         "img": Leetcode,
-        "alt": "Redirect to Leetcode",
+        "alt": "Leetcode",
         "link": "https://leetcode.com/u/vinaymm"
     },
     {
         "id": "link3",
         "name": "Github",
         "img": Github,
-        "alt": "Redirect to Github",
+        "alt": "Github",
         "link": "https://github.com/vinaymmath"
     },
     {
         "id": "link4",
-        "name": "GithubResume",
+        "name": "Resume",
         "img": GithubResume,
-        "alt": "Redirect to Github Resume",
-        "link": "https://github.com/vinaymmath"
+        "alt": "Resume",
+        "link": LINK_TO_RESUME
     }
 ]
 
 const elList = linksList.map((hook) => {
     return (
-         <a className="redirection-menu-item" href={hook.link} target="_blank" key={hook.id}>
+         <a className="resources__item" href={hook.link} target="_blank" key={hook.id} data-tooltip={hook.alt}>
             <img src={hook.img} alt={hook.alt}/>
         </a>
     )
@@ -45,7 +46,7 @@ const elList = linksList.map((hook) => {
 export default function ProfileResources() {
     return(
         <>
-            <div className="resource-container">
+            <div className="resources">
                 { elList }
             </div>
         </>

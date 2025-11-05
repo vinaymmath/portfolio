@@ -1,0 +1,48 @@
+
+.page__about{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: rgb(157, 159, 158);
+
+    .page__about-title{
+        font-size: 2rem;
+    }
+    .page__about-title--primary{
+        color: #ffffff;
+    }
+    .page__about-title--secondary{
+        color: #DD6011;
+    }
+
+    .page__about-desc{
+        font-size: 16px;
+    }
+    
+    .page__about-resume{
+        margin-top: 1.5rem;
+        .resume{
+            padding: 0.5rem 1.5rem;
+            width: max-content;
+        }
+    }
+
+    .page__about-highlights{
+        padding-top: 30px;
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+
+        .page__about-highlight{
+            text-transform: uppercase;
+            max-width: 150px;
+            font-size: 20px;
+            flex: 1;
+
+            .page__about-highlight-value{
+                font-size: 28px;
+                color: #DD6011;
+            }
+        }
+    }
+}
