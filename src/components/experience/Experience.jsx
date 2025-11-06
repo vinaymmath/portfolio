@@ -13,7 +13,7 @@ export default function Experience() {
 							<div>
 								<div className="section__item__header">
 									<h3 className="section__item-title">Zeta</h3>
-									<img className="section__item-action" src={Arrow}/>
+									<img className="section__item-action" src={Arrow} alt="arrow to indicate link"/>
 								</div>
 								<ul className="section__item-list">
 									<li className="section__item-list-item">

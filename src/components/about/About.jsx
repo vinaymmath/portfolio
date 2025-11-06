@@ -10,9 +10,9 @@ export default function About() {
           <span className="page__about-title--secondary">ENGINEER</span>
         </h1>
         <p className="page__about-desc">
-          Passionate about crafting maintainable, high-performance frontends,
-          enhancing user experience, and mentoring teams to deliver quality
-          software.
+          I am a passionate Frontend Engineer with over 8 years of experience building scalable, high-performance web applications.
+          I specialize in modern front-end architecture, including micro-frontends, reusable component libraries, and UI performance optimization.
+          I focus on building clean, efficient, and user-centric interfaces that scale seamlessly across projects and teams.
         </p>
         <div className="page__about-highlights">
           <p className="page__about-highlight">

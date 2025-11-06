@@ -3,20 +3,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 1.2rem;
     width: 100%;
     max-width: 325px;
     div, p, h3{
         text-align: center;
     }
-    h3{
-        font-size: 26px;
+    .intro-name{
+        font-size: 1.3rem;
         font-weight: 600;
     }
-    p{
+    .intro-text{
+        margin: 1rem 0;
         font-size: 14px;
         line-height: 1.8;
-        text-align: left;
         color: rgb(157, 159, 158);
     }
     .intro-reachout_btn-container{
@@ -24,7 +24,10 @@
         flex-direction: column;
         justify-content: flex-start;
         width: 100%;
-        gap: 0.5rem;
+        gap: 1rem;
+        .intro-text_reachout{
+            // text-align: left;
+        }
 
         .intro-reachout_btn{
             cursor: pointer;

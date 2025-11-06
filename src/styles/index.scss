@@ -24,7 +24,7 @@ button{
     color: #ffffff;
     font-size: 14px;
     font-family:  'Poppins', 'Fira Code', 'Courier New', Courier, monospace;
-    padding: 0.5rem;
+    padding: 0.6rem;
     cursor: pointer;
 }
 
@@ -94,11 +94,11 @@ button{
     background-size: 165px;
     background-color: rgba(30, 34, 43, 0.94);
     flex: 1;
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     font-size: 14px;
     display: flex;
     flex-direction: column;
-    scroll-margin-top: 80px; 
+    scroll-margin-top: 80px;
 
     .section__item-title{
         font-size: 18px;
@@ -139,8 +139,8 @@ button{
             list-style: square;
 
             .section__item-list-item{
-                margin-top: 0.6rem;
-                line-height: 1.6;
+                margin-top: 1rem;
+                line-height: 1.8;
                 .section__item-list-item-highlisht{
                     color: #DD6011;
                 }
@@ -154,6 +154,9 @@ button{
                 }
             } 
         }
+    }
+    &.footer{
+        padding: 1.5rem;
     }
 }
 

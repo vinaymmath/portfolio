@@ -35,8 +35,8 @@ function App() {
               <div className="section" id="reachout">
                 <Reachout></Reachout>
               </div>
-              <div className="section" id="reachout">
-                <p>Made by <span className="highlight">Vinay M</span></p>
+              <div className="section footer" id="reachout">
+                <p>Developed by <span className="highlight">Vinay M</span></p>
               </div>
             </div>
           </div>
