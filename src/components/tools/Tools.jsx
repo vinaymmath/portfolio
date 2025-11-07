@@ -1,4 +1,4 @@
-import "./skills.scss";
+import "./tools.scss";
 import Expressjs from "../../assets/icons/skills/expressjs.svg";
 import Figma from "../../assets/icons/skills/figma.svg";
 import Jenkins from "../../assets/icons/skills/jenkins.svg";
@@ -16,6 +16,8 @@ import Nextjs from "../../assets/icons/skills/nextjs.svg";
 import Vscode from "../../assets/icons/skills/vscode.svg";
 import Postman from "../../assets/icons/skills/postman.svg";
 import Vercel from "../../assets/icons/skills/vercel.svg";
+import { trackEvent } from "../../utils/analytics"
+import { analyticsLocations } from "../../utils/constants"
 
 const skillsList = [
   { id: "s1", name: "React", imgSrc: React, desc: "UI library", url: "https://reactjs.org" },
@@ -46,6 +48,9 @@ const skillsListEl = skillsList.map((skill) => {
       target="_blank"
       rel="noopener noreferrer"
       title={skill.desc}
+      onClick={() => trackEvent(`click_hyperlink_${skill.name.toLowerCase().split(" ").join("-")}`, {
+        location: analyticsLocations.tools
+      })}
     >
       <img src={skill.imgSrc} alt={skill.desc} className="tool-img" />
 	  <div className="tool__info">

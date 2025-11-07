@@ -2,10 +2,13 @@ import Header from "./components/header/Header"
 import Intro from "./components/intro/Intro"
 import About from "./components/about/About"
 import Experience from "./components/experience/Experience"
-import Skills from "./components/skills/Skills"
+import Tools from "./components/tools/Tools"
 import Reachout from "./components/reachout/Reachout"
+import { useAnalytics } from "./utils/analytics"
 
 function App() {
+  useAnalytics();
+
   return (
     <>
       <div className="page">
@@ -29,8 +32,8 @@ function App() {
               <div className="section" id="experience">
                 <Experience></Experience>
               </div>
-              <div className="section" id="skills">
-                <Skills></Skills>
+              <div className="section" id="tools">
+                <Tools></Tools>
               </div>
               <div className="section" id="reachout">
                 <Reachout></Reachout>

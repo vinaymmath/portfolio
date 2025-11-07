@@ -1,5 +1,7 @@
-import { LINK_TO_RESUME } from "../../utils/constants";
-import "./about.scss";
+import { LINK_TO_RESUME } from "../../utils/constants"
+import { trackEvent } from "../../utils/analytics"
+import { analyticsLocations } from "../../utils/constants"
+import "./about.scss"
 
 export default function About() {
   return (
@@ -39,7 +41,13 @@ export default function About() {
         <div className="page__about-resume">
           {/* <p>Download my resume, here:</p> */}
           <br />
-          <a href={LINK_TO_RESUME} target="_blank">
+          <a 
+            href={LINK_TO_RESUME} 
+            target="_blank"
+            onClick={() => trackEvent(`click_resume`, {
+                location: analyticsLocations.about
+            })}
+          >
             <button className="resume">
                 Resume
             </button>

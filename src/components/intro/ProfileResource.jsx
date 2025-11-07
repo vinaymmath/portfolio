@@ -2,7 +2,9 @@ import LinkedIn from "../../assets/icons/linkedIn.svg"
 import Leetcode from "../../assets/icons/leetcode.svg"
 import Github from "../../assets/icons/github.svg"
 import GithubResume from "../../assets/icons/github-resume.svg"
-import { LINK_TO_RESUME } from "../../utils/constants";
+import { LINK_TO_RESUME } from "../../utils/constants"
+import { trackEvent } from "../../utils/analytics"
+import { analyticsLocations } from "../../utils/constants"
 
 const linksList = [
     {
@@ -37,7 +39,16 @@ const linksList = [
 
 const elList = linksList.map((hook) => {
     return (
-         <a className="resources__item" href={hook.link} target="_blank" key={hook.id} data-tooltip={hook.alt}>
+         <a 
+            className="resources__item"
+            href={hook.link}
+            target="_blank"
+            key={hook.id}
+            data-tooltip={hook.alt}
+            onClick={() => trackEvent(`click_${hook.name.toLowerCase()}`, {
+                location: analyticsLocations.intro
+            })}
+        >
             <img src={hook.img} alt={hook.alt}/>
         </a>
     )

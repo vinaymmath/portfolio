@@ -1,5 +1,7 @@
+import Arrow from "../../assets/icons/arrow.svg"
+import { trackEvent } from "../../utils/analytics"
+import { analyticsLocations } from "../../utils/constants"
 import "./experience.scss"
-import Arrow from "../../assets/icons/arrow.svg";
 
 export default function Experience() {
     return(
@@ -9,7 +11,14 @@ export default function Experience() {
 							<span className="page__about-title--primary">8 YEARS OF </span>	
 							<span className="page__about-title--secondary">EXPERIENCE </span>	
 						</h3>
-						<a className="section__item" href="https://www.linkedin.com/company/zetasuite/" target="_blank">
+						<a 
+							className="section__item"
+							href="https://www.linkedin.com/company/zetasuite/"
+							target="_blank"
+							onClick={() => trackEvent(`click_hyperlink_zeta`, {
+								location: analyticsLocations.experience
+							})}
+						>
 							<div>
 								<div className="section__item__header">
 									<h3 className="section__item-title">Zeta</h3>

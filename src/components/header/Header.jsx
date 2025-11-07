@@ -5,6 +5,8 @@ import ToolsSvg from "../../assets/icons/tools.svg"
 import ContactSvg from "../../assets/icons/contact.svg"
 import ResumeSvg from "../../assets/icons/resume1.svg"
 import { LINK_TO_RESUME } from "../../utils/constants";
+import { trackEvent } from "../../utils/analytics";
+import { analyticsLocations } from "../../utils/constants"
 
 const linksList = [
     {
@@ -30,10 +32,10 @@ const linksList = [
     },
     {
         "id": "res4",
-        "name": "Skills",
+        "name": "Tools",
         "img": ToolsSvg,
-        "alt": "Skills",
-        "link": "#skills"
+        "alt": "Tools",
+        "link": "#tools"
     },
     {
         "id": "res5",
@@ -54,7 +56,16 @@ const linksList = [
 
 const elList = linksList.map((hook) => {
     return (
-         <a className="resources__item" href={hook.link} key={hook.id} data-tooltip={hook.alt} target={hook.newTab ? "_blank": ""}>
+         <a 
+            className="resources__item"
+            href={hook.link}
+            key={hook.id}
+            data-tooltip={hook.alt}
+            target={hook.newTab ? "_blank": ""}
+            onClick={() => trackEvent(`click_${hook.name.toLowerCase()}`, {
+                location: analyticsLocations.header
+            })}
+        >
             <img src={hook.img} alt={hook.alt}/>
         </a>
     )

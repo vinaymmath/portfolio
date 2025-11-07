@@ -1,5 +1,7 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { trackEvent } from "../../utils/analytics"
+import { analyticsLocations } from "../../utils/constants"
 import "./reachout.scss";
 
 export default function Reachout() {
@@ -22,7 +24,19 @@ export default function Reachout() {
     }
     const handleSubmit = async(e) => {
         e.preventDefault();
+        const formData = new FormData(e.target);
+        const name = formData.get("name").trim();
+        const email = formData.get("email").trim();
+        const subject = formData.get("subject").trim();
+        const message = formData.get("message").trim();
 
+        if (!name || !email || !subject || !message) {
+            alert("Please fill out all the fields correctly.");
+            return;
+        }
+        trackEvent(`reachout_form_submit_initiate`, {
+            location: analyticsLocations.reachout
+        })
         const userEmail =
           form.current?.elements?.email?.value ||
           form.current?.querySelector('input[name="email"]')?.value ||
@@ -44,11 +58,17 @@ export default function Reachout() {
                     email: '',
                     subject: '',
                     message: ''
+                })   
+                trackEvent(`reachout_form_submit_success`, {
+                    location: analyticsLocations.reachout
                 })
             },
             (error) => {
                 console.log(error.text);
                 setStatus("❌ Failed to send message. Try again later.");
+                trackEvent(`reachout_form_submit_failure`, {
+                    location: analyticsLocations.reachout
+                })
             }
         );
     };

@@ -1,6 +1,9 @@
 // import SquarePrifileImg from "../../assets/profilePictures/square_profile_pic.png"
 import SquarePrifileImg from "../../assets/profilePictures/sq_pic_2_compressed.jpg"
 import ProfileResources from "./ProfileResource.jsx"
+import { trackEvent } from "../../utils/analytics.js"
+import { analyticsLocations } from "../../utils/constants"
+
 import "./intro.scss";
 
 export default function Intro(){
@@ -23,7 +26,11 @@ export default function Intro(){
                     <p className="intro-text_reachout">
                         Let’s create something impactful together, feel free to get in touch.
                     </p>
-                    <a href="#reachout" className="intro-reachout_btn">
+                    <a href="#reachout" 
+                        className="intro-reachout_btn"
+                        onClick={() => trackEvent(`click_contact`, {
+                            location: analyticsLocations.intro
+                        })}>
                         <button>
                             Reach Out
                         </button>
