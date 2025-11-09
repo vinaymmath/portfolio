@@ -1,5 +1,6 @@
 // import SquarePrifileImg from "../../assets/profilePictures/square_profile_pic.png"
-import SquarePrifileImg from "../../assets/profilePictures/sq_pic_2_compressed.jpg"
+// import SquarePrifileImg from "../../assets/profilePictures/sq_pic_2_compressed.jpg"
+import SquarePrifileImg from "../../assets/profilePictures/square_pic-min_converted.jpeg"
 import ProfileResources from "./ProfileResource.jsx"
 import { trackEvent } from "../../utils/analytics.js"
 import { analyticsLocations } from "../../utils/constants"
